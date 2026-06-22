@@ -37,14 +37,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    echo "Building Docker image: ${DOCKER_REPO}:${IMAGE_TAG}" {
+                    echo "Building Docker image: ${DOCKER_REPO}:${IMAGE_TAG}" 
                         sh '''
                             docker build \
                                 -t ${DOCKER_REPO}:${IMAGE_TAG} \
                                 -t ${DOCKER_REPO}:${LATEST_TAG} \
                                 -f Dockerfile .
                         '''
-                    }
+
                     echo "✓ Docker image built successfully"
                 }
             }
