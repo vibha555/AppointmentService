@@ -37,8 +37,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    echo "Building Docker image: ${DOCKER_REPO}:${IMAGE_TAG}"
-                    dir('AppointmentService') {
+                    echo "Building Docker image: ${DOCKER_REPO}:${IMAGE_TAG}" {
                         sh '''
                             docker build \
                                 -t ${DOCKER_REPO}:${IMAGE_TAG} \
