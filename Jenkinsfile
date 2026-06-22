@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         DOCKER_REGISTRY = 'docker.io'
-        DOCKER_REPO = 'vibha555/appointmentservice'
+        DOCKER_REPO = 'vibha5552/appointmentservice'
         DOCKER_CREDENTIALS = 'dockerhub_creds'
         IMAGE_TAG = "${BUILD_NUMBER}"
         LATEST_TAG = 'latest'
